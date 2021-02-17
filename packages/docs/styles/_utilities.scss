@@ -10,6 +10,9 @@
   }
 
   // Text content that shouldn't be too long.
+  h2,
+  h3,
+  h4,
   & > p,
   & > ul > li {
     max-width: 60ch;
