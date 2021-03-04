@@ -1,7 +1,10 @@
 ---
-layout: layout.njk
+layout: page.njk
 title: Updates
 description: Read the latest updates from the Design System team. We will highlight new features, changes, and progress.
+eleventyNavigation:
+  key: Updates
+  order: 4
 ---
 
 {{ description }}

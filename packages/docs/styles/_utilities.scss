@@ -3,9 +3,9 @@
     font-size: var(--text-x-small);
   }
 
-  h2,
-  h3,
-  h4 {
+  & > h2,
+  & > h3,
+  & > h4 {
     margin-top: var(--space-xx-large);
   }
 

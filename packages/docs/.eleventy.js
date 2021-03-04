@@ -1,4 +1,5 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const pluginSass = require("eleventy-plugin-sass");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
@@ -20,6 +21,8 @@ module.exports = function (eleventyConfig) {
     alwaysWrapLineHighlights: false,
   });
   eleventyConfig.addPlugin(pluginSass);
+
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // Tell the MD processor to add IDs and links to headings.
   eleventyConfig.setLibrary(

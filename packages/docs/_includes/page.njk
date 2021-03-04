@@ -2,9 +2,7 @@
 layout: base.njk
 ---
 <main class="layout">
-  {% include 'site-navigation.njk' %}
-
-  <article class="site-layout__content owl prose">
+  <article class="owl prose">
     <h1>{{ title }}</h1>
 
     {{ content | safe }}
@@ -13,7 +11,3 @@ layout: base.njk
       <span>If you found a mistake on this page, would you kindly submit a fix<span class="visually-hidden"> on GitHub</span>?</span></a>
   </article>
 </main>
-<script src="https://unpkg.com/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>

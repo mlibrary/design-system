@@ -1,12 +1,15 @@
 ---
-layout: layout.njk
+layout: sub-page.njk
 pagination:
-    data: components
-    alias: component
-    size: 1
+  data: components
+  alias: component
+  size: 1
 permalink: "{{ component.name | slug }}/"
 templateEngineOverride: njk,md
 eleventyComputed:
+  eleventyNavigation:
+    key: "{{ component.name }}"
+    parent: "Web Components"
   title: "{{ component.name }}"
   isExperimental: {{ component.isExperimental }}
   description: "{{ component.description }}"

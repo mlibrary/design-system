@@ -20,13 +20,10 @@ description: Documentation for the U-M Library Design System.
     <meta name="twitter:card" content="summary_large_image"/>
 
     <link rel="icon" href="/static/images/favicon-32x32.png" type="image/png"/>
-    <!-- Production umich-lib styles -->
+
     <link
       href="https://unpkg.com/@umich-lib/css@v1/dist/umich-lib.css"
       rel="stylesheet"/>
-
-    <!-- Development umich-lib styles -->
-    <!-- <link rel="stylesheet" href="{{ '/css/umich-lib.css' | url }}"/> -->
     <link rel="stylesheet" href="{{ '/styles/global.css' | url }}"/>
     <script
       type="module"
@@ -37,7 +34,21 @@ description: Documentation for the U-M Library Design System.
   </head>
   <body>
     <m-universal-header></m-universal-header>
-    <m-website-header name="Design System"></m-website-header>
+    <m-website-header name="Design System">
+      <nav class="website-navigation">
+        <ul>
+          {% set navPages = collections.all | eleventyNavigation %}
+          <li>
+            <a href="#get-started">Get started</a>
+          </li>
+          {% for entry in navPages %}
+            <li>
+              <a href="{{ entry.url | url }}" {% if entry.url == page.url %}aria-current="page"{% endif %}>{{ entry.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </m-website-header>
 
     {{ content | safe }}
 

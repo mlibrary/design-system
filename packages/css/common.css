@@ -65,7 +65,7 @@ a {
   text-decoration: underline;
 
   &:visited {
-    color: var(--color-indigo-500);
+    color: var(--color-teal-500);
   }
 }
 

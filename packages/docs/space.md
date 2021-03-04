@@ -1,17 +1,12 @@
 ---
 layout: sub-page.njk
 templateEngineOverride: njk
-title: Design tokens
+title: Space
 description: Design tokens are a tech-agnostic way to store low-level values and then use them to create the styles for your website. Use tokens instead of hard coded values to ensure a scalable, consistent, and sustainable system.
+eleventyNavigation:
+  key: Space
+  parent: Styles
 ---
-
-<p>{{ description }}</p>
-
-<p>Design tokens are available to use in your stylesheets by <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">custom properties (MDN web docs)</a>.</p>
-
-{% include 'color-palettes.njk' %}
-
-<h2 id="space">Space</h2>
 
 <p>Use the spacing tokens to create a visual balance that makes your website easier to scan. These space tokens should be used for all padding, margin and position coordinates.</p>
 

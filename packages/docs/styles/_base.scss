@@ -59,10 +59,6 @@ body {
 
 main.layout {
   align-content: baseline;
-
-  @media screen and (min-width: 920px) {
-    margin-top: var(--space-xx-large);
-  }
 }
 
 /* end */
@@ -164,6 +160,7 @@ h4 {
     grid-column: 4 / span 10;
     padding-left: var(--space-xxx-large);
     padding-right: var(--space-large);
+    padding-top: var(--space-xx-large);
   }
 
   .site-layout__right {
@@ -216,10 +213,8 @@ h4 {
 }
 
 .integration {
-  margin: var(--space-x-large) 0;
-
   border-top: solid 2px var(--color-maize-400);
-  padding-top: var(--space-large);
+  padding: var(--space-x-large) 0;
 
   p {
     max-width: 75ch;
@@ -242,4 +237,5 @@ pre {
 
 img {
   display: block;
+  width: 100%;
 }

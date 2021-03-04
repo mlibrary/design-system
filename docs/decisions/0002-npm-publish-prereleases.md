@@ -2,4 +2,12 @@
 
 March 3, 2021
 
-[to be written]
+## Context
+
+## Decision
+
+## Status
+
+Proposed
+
+## Consequences

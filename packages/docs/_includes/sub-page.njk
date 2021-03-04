@@ -1,0 +1,27 @@
+---
+layout: base.njk
+---
+<main class="layout">
+  <nav class="site-navigation site-layout__left" aria-label="related pages">
+    <div class="sticky-top">
+      <h2 class="subtle-heading">{{ eleventyNavigation.parent }}</h2>
+      {% set navPages = collections.all | eleventyNavigation(eleventyNavigation.key) %}
+      {% for entry in navPages %}
+        <li>
+          <a href="{{ entry.url | url }}" {% if entry.url == page.url %}aria-current="page"{% endif %}>{{ entry.title }}</a>
+        </li>
+      {% endfor %}
+    </div>
+  </nav>
+
+  <article class="site-layout__content owl prose">
+    <h1>
+      {{ title }}
+    </h1>
+
+    {{ content | safe }}
+
+    <a href="https://github.com/mlibrary/design-system/tree/master/packages/docs/{{ page.inputPath }}" class="edit-on-github__link">{% include 'github-svg.njk' %}
+      <span>If you found a mistake on this page, would you kindly submit a fix<span class="visually-hidden"> on GitHub</span>?</span></a>
+  </article>
+</main>
