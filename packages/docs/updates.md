@@ -11,8 +11,6 @@ eleventyNavigation:
 
 ## February 2021
 
-<img src="/static/images/redesigned-landing-page.png" alt="" />
-
 - Redesigned the landing page to highlight what is available to use.
 - Getting started information has been reduced to a section of content just obove the footer on every page, for ease of access and use.
 - Redesigned and lightened up the code previews to allow for "Copy HTML" and "Edit in CodePen."

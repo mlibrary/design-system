@@ -30,11 +30,27 @@
     "status": "experimental",
     "whenToUse": "If your website is hosted on lib.umich.edu.",
     "whenNotToUse": "If your website requires a more complicated U-M website header then you may need to work with the Design System team or build your own.",
-    "slot": "Children",
-    "example": "<m-website-header name=\"Example\">\n  <a href=\"/\">Log in</a>\n</m-website-header>",
+    "items": "Main navigation items.",
+    "example": "<m-website-header name=\"Example\"></m-website-header>\n\n<script>\n  var header = document.querySelector('m-website-header[name=\"Example\"]')\n\n  header.items = [\n    { label: \"Web Components\", href: \"/web-components\" },\n    { label: \"Styles\", href: \"/styles\" }\n  ]\n</script>",
     "usedBy": "- [Design System](https://design-system.lib.umich.edu/)",
     "tag": "m-website-header",
     "props": [
+      {
+        "name": "items",
+        "type": "any",
+        "mutable": false,
+        "attr": "items",
+        "reflectToAttr": true,
+        "docs": "The user-friendly name of the U-M Library website that uses this Header.",
+        "docsTags": [],
+        "values": [
+          {
+            "type": "any"
+          }
+        ],
+        "optional": false,
+        "required": false
+      },
       {
         "name": "name",
         "type": "string",

@@ -91,7 +91,7 @@ pre .line-highlight {
 }
 
 .token.function {
-  color: var(--color-teal-300);
+  color: var(--color-neutral-400);
 }
 
 .token.class-name,
@@ -111,11 +111,11 @@ pre .line-highlight {
 
 .token.boolean,
 .token.number {
-  color: var(--color-indigo-200);
+  color: var(--color-indigo-400);
 }
 
 .token.string {
-  color: var(--color-indigo-300);
+  color: var(--color-blue-400);
 }
 
 .token.entity,
@@ -134,7 +134,7 @@ pre .line-highlight {
 .token.keyword,
 .token.important,
 .token.deleted {
-  color: var(--color-indigo-200);
+  color: var(--color-neutral-500);
 }
 
 .token.regex,
@@ -173,10 +173,6 @@ code.language-markup {
 code.language-markup .token.tag,
 .token.tag {
   color: var(--color-neutral-500);
-}
-
-.token.string {
-  font-weight: 600;
 }
 
 code.language-markup .token.attr-name,

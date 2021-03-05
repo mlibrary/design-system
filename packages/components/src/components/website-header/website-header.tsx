@@ -6,11 +6,18 @@ import { Component, Prop, h } from "@stencil/core";
  * @status experimental
  * @whenToUse If your website is hosted on lib.umich.edu.
  * @whenNotToUse If your website requires a more complicated U-M website header then you may need to work with the Design System team or build your own.
- * @slot Children
+ * @items Main navigation items.
  * @example
- * <m-website-header name="Example">
- *   <a href="/">Log in</a>
- * </m-website-header>
+ * <m-website-header name="Example"></m-website-header>
+ * 
+ * <script>
+ *   var header = document.querySelector('m-website-header[name="Example"]')
+ *
+ *   header.items = [
+ *     { label: "Web Components", href: "/web-components" },
+ *     { label: "Styles", href: "/styles" }
+ *   ]
+ * </script>
  * @usedBy
  * - [Design System](https://design-system.lib.umich.edu/)
  */
@@ -26,7 +33,12 @@ export class WebsiteHeader {
   @Prop({ reflect: true }) name: string;
 
   /**
-   * The URL linked to when you click the website name.
+   * An array of items for the main navigation. Items have to include mandatory "label" and "href" fields to work.
+   */
+  @Prop({ reflect: true }) items;
+
+  /**
+   * The URL that the logo and name link to.
    */
   @Prop({ reflect: true }) to: string = "/";
 
@@ -42,9 +54,23 @@ export class WebsiteHeader {
                 <span class="website-header__website-name">{this.name}</span>
               )}
             </a>
-
-            <slot />
           </div>
+          {this.items && (
+            <nav class="website-header__nav" aria-label="main">
+              <ul class="website-header__nav-items">
+                {this.items.map(item => (
+                  <li class="website-header__nav-item">
+                    <a
+                      href={item.href}
+                      class="website-header__nav-item-link"
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
         </div>
       </header>
     );

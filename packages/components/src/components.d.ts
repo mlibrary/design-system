@@ -19,11 +19,15 @@ export namespace Components {
     }
     interface MWebsiteHeader {
         /**
+          * An array of items for the main navigation. Items have to include mandatory "label" and "href" fields to work.
+         */
+        "items": any;
+        /**
           * The user-friendly name of the U-M Library website that uses this Header.
          */
         "name": string;
         /**
-          * The URL linked to when you click the website name.
+          * The URL that the logo and name link to.
          */
         "to": string;
     }
@@ -88,11 +92,15 @@ declare namespace LocalJSX {
     }
     interface MWebsiteHeader {
         /**
+          * An array of items for the main navigation. Items have to include mandatory "label" and "href" fields to work.
+         */
+        "items"?: any;
+        /**
           * The user-friendly name of the U-M Library website that uses this Header.
          */
         "name"?: string;
         /**
-          * The URL linked to when you click the website name.
+          * The URL that the logo and name link to.
          */
         "to"?: string;
     }
