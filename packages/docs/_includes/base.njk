@@ -54,7 +54,19 @@ description: Documentation for the U-M Library Design System.
 
     {% include 'footer.njk' %}
 
-    <script src="https://unpkg.com/anchor-js/anchor.min.js"></script>
+    <script>
+      var header = document.querySelector('m-website-header')
+
+      header.items = [
+        {% for entry in navPages %}
+          {
+            label: "{{ entry.title }}",
+            href: "{{ entry.url }}"
+          },
+        {% endfor %}
+      ]
+    </script>
+
     <script src="/sw.js"></script>
     <script>
       /**

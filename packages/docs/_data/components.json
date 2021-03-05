@@ -41,7 +41,7 @@
         "mutable": false,
         "attr": "items",
         "reflectToAttr": true,
-        "docs": "The user-friendly name of the U-M Library website that uses this Header.",
+        "docs": "An array of items for the main navigation. Items have to include mandatory \"label\" and \"href\" fields to work.",
         "docsTags": [],
         "values": [
           {
@@ -73,7 +73,7 @@
         "mutable": false,
         "attr": "to",
         "reflectToAttr": true,
-        "docs": "The URL linked to when you click the website name.",
+        "docs": "The URL that the logo and name link to.",
         "docsTags": [],
         "default": "\"/\"",
         "values": [
