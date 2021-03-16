@@ -1,12 +1,13 @@
-# U-M Library Design System
+# University of Michigan Library Design System
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/46fd3abb-e61c-4a7e-b154-c22e375a3345/deploy-status)](https://app.netlify.com/sites/umich-lib-design-system/deploys) [![Maintained with Lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+We work to build trust in our digital services and create components and standards that are reusable, equitable, informed by research, and available to the public.
 
-The design system is an open-source platform for web teams to reuse common solutions and learn from one another to help build accessible, inclusive, and high-quality websites.
+Documentation: https://design-system.lib.umich.edu
 
-## Looking for the documentation?
-
-https://design-system.lib.umich.edu
+| Package                                                                        | Latest release                                                 | Unstable build                                                     |
+| ------------------------------------------------------------------------------ | -------------------------------------------------------------- | ------------------------------------------------------------------ |
+| [`@umich-lib/css`](https://www.npmjs.com/package/@umich-lib/css)               | ![](https://img.shields.io/npm/v/@umich-lib/css/latest)        | ![](https://img.shields.io/npm/v/@umich-lib/css/prerelease)        |
+| [`@umich-lib/components`](https://www.npmjs.com/package/@umich-lib/components) | ![](https://img.shields.io/npm/v/@umich-lib/components/latest) | ![](https://img.shields.io/npm/v/@umich-lib/components/prerelease) |
 
 ## Contribute to repo
 
@@ -43,13 +44,3 @@ npm start
 Once started, a development environment of local packages for `@umich-lib/docs` is available at http://localhost:8080/ and `@umich-lib/components` at http://localhost:3333/.
 
 For changes between packages to appear, stop the packages, rerun `npm build` then `npm start`. For example, for a `@umich-lib/css` change to appearing in `@umich-lib/docs`.
-
-Each package has a CONTRIBUTING.md file for further details specific to that package.
-
-## Publish packages
-
-You'll need access to the NPM `@umich-lib` group, but then run the following and answer the prompts.
-
-```
-lerna:publish
-```
